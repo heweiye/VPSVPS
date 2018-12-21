@@ -19,7 +19,14 @@ sysctl net.ipv4.tcp_available_congestion_control
 ``` bash
 lsmod | grep bbr
 ```
-如果内核版本是4.9以下的
+内核下载http://kernel.ubuntu.com/~kernel-ppa/mainline/
+如果内核版本是4.9以下的更换
+``` bash
+wget https://kernel.ubuntu.com/~kernel-ppa/mainline/v4.12.4/linux-image-4.12.4-041204-generic_4.12.4-041204.201707271932_amd64.deb
+dpkg -i linux-image-4.12.4-041204-generic_4.12.4-041204.201707271932_amd64.deb
+/usr/sbin/update-grub
+reboot
+```
 #### aria2安装并整合rclone自动上传
 ``` bash
 wget -N https://raw.githubusercontent.com/heweiye/aria2.sh/master/aria2.sh && chmod +x aria2.sh && bash aria2.sh
