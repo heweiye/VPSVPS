@@ -37,7 +37,6 @@ on-download-complete=/root/.aria2/autoupload.sh
 service aria2 restart
 ```
 #### 安装rclone并配置自动挂载磁盘
-安装
 ``` bash
 apt-get install fuse -y
 curl https://rclone.org/install.sh | sudo bash
@@ -61,6 +60,31 @@ update-rc.d -f rcloned defaults
 bash /etc/init.d/rcloned start
 ```
 检测信息显示rclone启动成功即可。
+#### 安装GDLIST
+``` bash
+git clone https://github.com/reruin/gdlist.git
+cd gdlist
+docker-compose up -d
+```
+访问 http://localhost:33001 WebDAV 目录 http://localhost:33001/webdav
+通过Caddy添加域名SSL反代ShareList
+以下全部内容是一个整体，修改域名、IP、邮箱后一起复制到SSH运行！
+``` bash
+echo "a.com {
+ tls admin@a.com
+ proxy / 111.222.333.444:33001 {
+    header_upstream Host {host}
+    header_upstream X-Real-IP {remote}
+    header_upstream X-Forwarded-For {remote}
+    header_upstream X-Forwarded-Proto {scheme}
+  }
+ gzip
+}" >> /usr/local/caddy/Caddyfile
+/etc/init.d/caddy restart
+```
+Google Drive 分享链接一般是https://drive.google.com/drive/folders/xxxx?usp=sharing，则ID为xxxx。 
+OneDrive 分享链接一般是https://1drv.ms/f/xxxx，则ID为xxxx。
+
 #### gost.sh
 ``` bash
 wget https://raw.githubusercontent.com/heweiye/VPSVPS/master/gost.sh && chmod +x gost.sh && bash gost.sh
