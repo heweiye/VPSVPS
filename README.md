@@ -15,11 +15,11 @@ echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 sysctl -p
 sysctl net.ipv4.tcp_available_congestion_control
 ```
-查看是否开启BBR
+查看是否开启BBR成功
 ``` bash
 lsmod | grep bbr
 ```
-内核下载http://kernel.ubuntu.com/~kernel-ppa/mainline/
+更多内核下载http://kernel.ubuntu.com/~kernel-ppa/mainline/
 如果内核版本是4.9以下的更换
 ``` bash
 wget https://kernel.ubuntu.com/~kernel-ppa/mainline/v4.12.4/linux-image-4.12.4-041204-generic_4.12.4-041204.201707271932_amd64.deb
