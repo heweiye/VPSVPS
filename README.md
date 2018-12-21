@@ -4,7 +4,7 @@ apt-get update
 apt-get upgrade
 apt-get install curl nano unzip git sudo -y
 ```
-#### Debian&Ubuntu开启BBR的TCP加速
+#### Debian&Ubuntu手动开启BBR的TCP加速
 ``` bash
 uname -r
 ```
