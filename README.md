@@ -1,3 +1,11 @@
+#### 系统源日常更新
+apt-get install curl unzip sudo -y
+
+#### 安装rclone
+``` bash
+apt-get install curl unzip sudo -y
+curl https://rclone.org/install.sh | sudo bash
+```
 #### 配置rclone开机自动挂载
 ``` bash
 wget https://github.com/heweiye/VPSVPS/raw/master/rcloned && nano rcloned
