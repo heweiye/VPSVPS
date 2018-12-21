@@ -61,3 +61,7 @@ update-rc.d -f rcloned defaults
 bash /etc/init.d/rcloned start
 ```
 检测信息显示rclone启动成功即可。
+#### gost.sh
+``` bash
+wget https://raw.githubusercontent.com/heweiye/VPSVPS/master/gost.sh && chmod +x gost.sh && bash gost.sh
+```
