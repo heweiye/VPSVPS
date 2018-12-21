@@ -67,7 +67,7 @@ cd gdlist
 docker-compose up -d
 ```
 访问 http://localhost:33001 WebDAV 目录 http://localhost:33001/webdav
-通过Caddy添加域名SSL反代ShareList
+<br>通过Caddy添加域名SSL反代ShareList
 以下全部内容是一个整体，修改域名、IP、邮箱后一起复制到SSH运行！
 ``` bash
 echo "a.com {
