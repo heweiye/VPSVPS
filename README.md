@@ -43,7 +43,7 @@ curl https://rclone.org/install.sh | sudo bash
 ```
 配置rclone开机自动挂载
 ``` bash
-wget https://github.com/heweiye/VPSVPS/raw/master/rcloned && nano rcloned
+wget https://raw.githubusercontent.com/heweiye/VPSVPS/master/rcloned && nano rcloned
 ```
 修改一下内容：
 ``` bash
