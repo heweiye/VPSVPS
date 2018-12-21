@@ -22,6 +22,20 @@ wget -N https://raw.githubusercontent.com/heweiye/aria2.sh/master/aria2.sh && ch
 `delete.aria2.sh` 下载完成后删除 .aria2 文件。
 `delete.sh` 下载错误和停止后删除文件（包括 .aria2 文件），避免占用空间。
 `autoupload.sh` 下载完成后自动调用 rclone 上传(move)到网盘，删除 .aria2 文件，过滤无用文件等。
+默认aria2是正常下载，如需要整合rrclone上传后删除本地文件
+``` bash
+vi /root/.aria2/autoupload.sh
+name='Onedrive' #配置Rclone时的name
+folder='/DRIVEX/Download'   #网盘里的文件夹，留空为整个网盘。
+vi /root/.aria2/aria2.conf
+# 下载完成后执行的命令
+# 删除.aria2文件
+#on-download-complete=/root/.aria2/delete.aria2.sh
+# 调用 rclone 上传(move)到网盘
+on-download-complete=/root/.aria2/autoupload.sh
+重启 Aria2
+service aria2 restart
+```
 #### 安装rclone并配置自动挂载磁盘
 安装
 ``` bash
