@@ -112,7 +112,7 @@ function pre_install(){
     echo	
 		
 	if [ "$xzy" == "2" ];then
-	    xzy="https://github.com/ginuerzh/gost/releases/download/v2.3/gost_2.3_linux_amd64.tar.gz"
+	    xzy="https://raw.githubusercontent.com/heweiye/VPSVPS/master/gost_2.3_linux_amd64.tar.gz"
     else
 	    xzy="https://code.aliyun.com/supppig/gost/raw/master/gost_2.3_linux_amd64.tar.gz"
 	fi
