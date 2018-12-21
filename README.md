@@ -22,9 +22,6 @@ LOCAL=''  #挂载地址，VPS本地挂载目录
 使用命令：
 #Debian系统
 ``` bash
-apt-get install sudo -y
-```
-``` bash
 mv rcloned /etc/init.d/rcloned
 chmod +x /etc/init.d/rcloned
 update-rc.d -f rcloned defaults
