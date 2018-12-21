@@ -1,4 +1,4 @@
-#### 系统源日常更新
+#### 系统软件源日常更新
 ``` bash
 apt-get update
 apt-get upgrade
