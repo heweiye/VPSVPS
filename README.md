@@ -2,7 +2,7 @@
 ``` bash
 apt-get update
 apt-get upgrade
-apt-get install curl nano unzip sudo -y
+apt-get install curl nano unzip git sudo -y
 ```
 
 #### aria2安装并整合rclone自动上传
