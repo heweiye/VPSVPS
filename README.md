@@ -4,7 +4,21 @@ apt-get update
 apt-get upgrade
 apt-get install curl nano unzip git sudo -y
 ```
-
+#### Debian&Ubuntu开启BBR的TCP加速
+``` bash
+uname -r
+```
+如果是4.9+的，比如使用以下命令开启
+``` bash
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+sysctl -p
+sysctl net.ipv4.tcp_available_congestion_control
+```
+查看是否开启BBR
+``` bash
+lsmod | grep bbr
+```
 #### aria2安装并整合rclone自动上传
 ``` bash
 wget -N https://raw.githubusercontent.com/heweiye/aria2.sh/master/aria2.sh && chmod +x aria2.sh && bash aria2.sh
