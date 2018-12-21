@@ -8,7 +8,7 @@ apt-get install curl nano unzip git sudo -y
 ``` bash
 uname -r
 ```
-如果是4.9+的，比如使用以下命令开启
+如果内核版本是4.9+的，比如Debian9就是4.9可以直接使用以下命令开启
 ``` bash
 echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
@@ -19,6 +19,7 @@ sysctl net.ipv4.tcp_available_congestion_control
 ``` bash
 lsmod | grep bbr
 ```
+如果内核版本是4.9以下的
 #### aria2安装并整合rclone自动上传
 ``` bash
 wget -N https://raw.githubusercontent.com/heweiye/aria2.sh/master/aria2.sh && chmod +x aria2.sh && bash aria2.sh
