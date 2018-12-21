@@ -39,6 +39,7 @@ service aria2 restart
 #### 安装rclone并配置自动挂载磁盘
 安装
 ``` bash
+apt-get install fuse -y
 curl https://rclone.org/install.sh | sudo bash
 ```
 配置rclone开机自动挂载
