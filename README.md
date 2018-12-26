@@ -70,6 +70,10 @@ service aria2 restart
 apt-get install fuse -y
 curl https://rclone.org/install.sh | sudo bash
 ```
+运行以下命令开始配置rclone
+``` bash
+rclone config
+```
 配置rclone开机自动挂载
 ``` bash
 wget https://raw.githubusercontent.com/heweiye/VPSVPS/master/rcloned && nano rcloned
