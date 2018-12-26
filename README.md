@@ -92,6 +92,13 @@ chmod +x /etc/init.d/rcloned
 update-rc.d -f rcloned defaults
 bash /etc/init.d/rcloned start
 ```
+rclone同步文件上传到网盘然后删除上传完成的本地文件
+``` bash
+wget https://raw.githubusercontent.com/heweiye/VPSVPS/master/rclone_aria2_upload.sh
+chmod +x rclone_aria2_upload.sh
+#记得修改里面的路径为自己的
+bash rclone_aria2_upload.sh
+```
 检测信息显示rclone启动成功即可。
 #### 安装GDLIST
 ``` bash
