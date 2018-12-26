@@ -2,7 +2,14 @@
 ``` bash
 apt-get update
 apt-get upgrade
-apt-get install curl nano unzip git sudo -y
+apt-get install wget curl nano unzip git sudo -y
+```
+#### wget断点续传重命名
+``` bash
+wget -c -t 0 -O new_putty.exe https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe
+# -c 断点续传
+# -t 0 反复尝试的次数，0为不限次数 
+# -O name_name.tar.gz 把下载的文件命名为new_name.tar.gz
 ```
 #### Debian&Ubuntu手动开启BBR的TCP加速
 ``` bash
